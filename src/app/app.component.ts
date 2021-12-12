@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'taskmgr';
+  swickThemeChecked = false;
+
+  swickTheme(checked: any) {
+    console.log(checked)
+    this.swickThemeChecked = checked
+  }
 }
