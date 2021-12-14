@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from './invite.types';
 
 @Component({
   selector: 'app-invite',
@@ -12,4 +13,23 @@ export class InviteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  autoMembers: any = ''
+  items = [
+    {
+      id: 1,
+      name: 'zhangsan'
+    },
+    {
+      id: 2,
+      name: 'lisi'
+    },
+    {
+      id: 3,
+      name: 'wangwu'
+    },
+  ]
+
+  displayUser(user: User) {
+    return user ? user.name : ''
+  }
 }

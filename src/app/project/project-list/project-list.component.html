@@ -2,7 +2,8 @@
   *ngFor="let project of projects"
   [item]="project"
   class="card"
-  >
+  (inviteMember)="inviteMemberFn()"
+>
 </app-project-item>
 <button
   class="fab-button"

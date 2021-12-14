@@ -14,6 +14,7 @@ import { ProjectListRoutingModule } from './project-routing.module';
     ProjectListComponent,
     ProjectItemComponent,
     NewProjectComponent,
+    InviteComponent,
   ],
   imports: [
     CommonModule,
