@@ -1,4 +1,4 @@
-<mat-drawer-container [class.my-dark-theme]="swickThemeChecked">
+<mat-drawer-container [class.my-dark-theme]="swichThemeChecked">
   <mat-drawer #sidenav mode="over">
     <app-sidebar></app-sidebar>
   </mat-drawer>
@@ -6,7 +6,7 @@
     <header>
       <app-header
         (toggle)="sidenav.toggle()"
-        (swichTheme)="swickTheme($event)"
+        (swichTheme)="swichTheme($event)"
       >
       </app-header>
     </header>

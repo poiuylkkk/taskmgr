@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  swickThemeChecked = false;
+  swichThemeChecked = false;
 
-  swickTheme(checked: any) {
+  swichTheme(checked: any) {
     console.log(checked)
-    this.swickThemeChecked = checked
+    this.swichThemeChecked = checked
   }
 }

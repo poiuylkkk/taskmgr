@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +10,7 @@ export class SidebarComponent implements OnInit {
 
   today!: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.getDate()
@@ -21,4 +22,7 @@ export class SidebarComponent implements OnInit {
     // console.log(this.today)
   }
 
+  doClick() {
+    this.router.navigateByUrl('/project')
+  }
 }
