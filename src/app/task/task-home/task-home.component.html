@@ -5,6 +5,8 @@
     <app-task-header
       [header]="taskList.name"
       (newTask)="onNewTask()"
+      (delTask)="onDelTask()"
+      (editTask)="onEditTask(taskList.name)"
       (moveAll)="onMoveAllTask()"
     ></app-task-header>
     <app-task-item
@@ -17,7 +19,7 @@
 <button
   class="fab-button"
   mat-fab
-  (click)="openAddTaskDialog()"
+  (click)="newTaskList()"
 >
   <mat-icon>add</mat-icon>
 </button>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-dialog.component';
 import { InviteComponent } from '../invite/invite.component';
 import { NewProjectComponent } from '../new-project/new-project.component';
 
@@ -55,5 +56,20 @@ export class ProjectListComponent implements OnInit {
         }
       }
     )
+  }
+
+  onClickDelProject() {
+    const dialogRef = this.dialog.open(
+      ConfirmDialogComponent,
+      {
+        data: {
+          title: '删除项目',
+          content: '您确认删除该项目吗？'
+        }
+      }
+    )
+    dialogRef.afterClosed().subscribe(res => {
+      console.log(res)
+    })
   }
 }

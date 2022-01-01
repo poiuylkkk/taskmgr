@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-dialog.component';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
+import { NewTaskListComponent } from '../new-task-list/new-task-list.component';
 import { NewTaskComponent } from '../new-task/new-task.component';
 
 @Component({
@@ -80,8 +82,15 @@ export class TaskHomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openAddTaskDialog() {
-
+  newTaskList() {
+    const dialog = this.dialog.open(
+      NewTaskListComponent,
+      {
+        data: {
+          title: '新建任务列表',
+        }
+      }
+    )
   }
 
   onNewTask() {
@@ -113,6 +122,33 @@ export class TaskHomeComponent implements OnInit {
         data: {
           title: '修改任务',
           task: taskItem
+        }
+      }
+    )
+  }
+
+  onDelTask() {
+    const dialogRef = this.dialog.open(
+      ConfirmDialogComponent,
+      {
+        data: {
+          title: '删除任务列表',
+          content: '您确定要删除当前任务吗？'
+        }
+      }
+    )
+    dialogRef.afterClosed().subscribe(res => {
+      console.log(res)
+    })
+  }
+
+  onEditTask(taskName: string) {
+    const dialog = this.dialog.open(
+      NewTaskListComponent,
+      {
+        data: {
+          title: '修改列表名称',
+          taskName: taskName
         }
       }
     )

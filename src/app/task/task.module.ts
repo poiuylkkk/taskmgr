@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { TaskRoutingModule } from './task-routing.module';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { CopyTaskComponent } from './copy-task/copy-task.component';
+import { NewTaskListComponent } from './new-task-list/new-task-list.component';
 
 
 
@@ -17,14 +18,17 @@ import { CopyTaskComponent } from './copy-task/copy-task.component';
     TaskItemComponent,
     TaskHeaderComponent,
     NewTaskComponent,
-    CopyTaskComponent
+    CopyTaskComponent,
+    NewTaskListComponent
   ],
   imports: [
     SharedModule,
     TaskRoutingModule
   ],
   entryComponents: [
-    NewTaskComponent
+    NewTaskComponent,
+    NewTaskListComponent,
+    CopyTaskComponent
   ]
 })
 export class TaskModule { }

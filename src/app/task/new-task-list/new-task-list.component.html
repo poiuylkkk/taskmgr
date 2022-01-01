@@ -1,0 +1,13 @@
+<form action="" autocomplete="off">
+  <h2 mat-dialog-title>{{title}}</h2>
+    <mat-dialog-content>
+      <mat-form-field appearance="standard"  class="full-width">
+        <input type="text" matInput placeholder="列表名称" [value]="taskName?taskName:''">
+      </mat-form-field>
+
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-raised-button type="button" color="primary" (click)="onClick()">保存</button>
+      <button mat-button type="button" mat-dialog-close>关闭</button>
+    </mat-dialog-actions>
+</form>
