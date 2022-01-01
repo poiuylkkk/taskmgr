@@ -1,5 +1,6 @@
 <app-project-item
   *ngFor="let project of projects"
+  (clickEditProject)="onClickEditProject(project)"
   [item]="project"
   class="card"
   (inviteMember)="inviteMemberFn()"

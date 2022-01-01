@@ -31,6 +31,7 @@ export class ProjectListComponent implements OnInit {
   openAddProjectDialog() {
     const dialogRef = this.dialog.open(NewProjectComponent, {
       data: {
+        title: '新建项目',
         dark: false,
         msg: 'this is my data'
       }
@@ -42,5 +43,17 @@ export class ProjectListComponent implements OnInit {
 
   inviteMemberFn() {
     this.dialog.open(InviteComponent)
+  }
+
+  onClickEditProject(project: any) {
+    console.log(project)
+    const dialog = this.dialog.open(
+      NewProjectComponent,
+      {
+        data: {
+          title: '编辑项目'
+        }
+      }
+    )
   }
 }

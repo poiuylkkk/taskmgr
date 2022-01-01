@@ -9,13 +9,15 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class NewProjectComponent implements OnInit {
 
+  title: string = ''
   constructor(
-    @Inject(MAT_DIALOG_DATA) private data: {dark: boolean, mas: string},
+    @Inject(MAT_DIALOG_DATA) private data: {dark: boolean, mas: string, title: string},
     private dialog: MatDialogRef<NewProjectComponent>,
     private oc: OverlayContainer
     ) { }
 
   ngOnInit(): void {
+    this.title = this.data.title
     console.log(`i resive ${this.data}`)
     ;
     this.data.dark

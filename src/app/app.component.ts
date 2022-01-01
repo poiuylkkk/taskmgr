@@ -1,3 +1,4 @@
+import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,5 +12,9 @@ export class AppComponent {
   swichTheme(checked: any) {
     console.log(checked)
     this.swichThemeChecked = checked
+  }
+
+  constructor(private oc: OverlayContainer) {
+    // this.oc.getContainerElement().classList.add('my-dark-theme')
   }
 }

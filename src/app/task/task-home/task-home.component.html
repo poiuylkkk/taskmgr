@@ -1,1 +1,23 @@
-<p>task-home works!</p>
+<div class="task-lists">
+  <app-task-list
+    class="list-container"
+    *ngFor="let taskList of taskLists">
+    <app-task-header
+      [header]="taskList.name"
+      (newTask)="onNewTask()"
+      (moveAll)="onMoveAllTask()"
+    ></app-task-header>
+    <app-task-item
+      *ngFor="let taskItem of taskList.tasks"
+      [item]="taskItem"
+      (clickItem)="onClickItem(taskItem)">
+    </app-task-item>
+  </app-task-list>
+</div>
+<button
+  class="fab-button"
+  mat-fab
+  (click)="openAddTaskDialog()"
+>
+  <mat-icon>add</mat-icon>
+</button>
