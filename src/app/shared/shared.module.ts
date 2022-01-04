@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav'
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 // import { MatMomentDateModule } from '@angular/material-moment-adapter'
 
@@ -44,6 +45,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatSidenavModule,
   ],
   exports: [
     CommonModule,
@@ -64,6 +66,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatSidenavModule,
   ],
   entryComponents: [
     ConfirmDialogComponent

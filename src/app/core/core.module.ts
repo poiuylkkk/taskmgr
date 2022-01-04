@@ -8,6 +8,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { loadSvgResources } from '../utils/svg.util';
 import { SharedModule } from '../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from '../app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -18,12 +20,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     HttpClientModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ]
 })
 export class CoreModule {

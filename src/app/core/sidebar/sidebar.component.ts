@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +12,8 @@ export class SidebarComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  @Output() navClick = new EventEmitter<void>()
+
   ngOnInit(): void {
     this.getDate()
   }
@@ -23,6 +25,7 @@ export class SidebarComponent implements OnInit {
   }
 
   doClick() {
-    this.router.navigateByUrl('/project')
+    // this.router.navigateByUrl('/project')
+    this.navClick.emit()
   }
 }

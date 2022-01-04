@@ -1,6 +1,6 @@
 <mat-drawer-container [class.my-dark-theme]="swichThemeChecked">
   <mat-drawer #sidenav mode="over">
-    <app-sidebar></app-sidebar>
+    <app-sidebar (navClick)="sidenav.toggle()"></app-sidebar>
   </mat-drawer>
   <div class="site" id="add">
     <header>

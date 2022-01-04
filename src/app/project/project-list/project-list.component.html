@@ -1,12 +1,15 @@
-<app-project-item
-  *ngFor="let project of projects"
-  (clickEditProject)="onClickEditProject(project)"
-  (clickDelProject)="onClickDelProject()"
-  [item]="project"
-  class="card"
-  (inviteMember)="inviteMemberFn()"
->
-</app-project-item>
+<div class="container" [@listAnim]="projects.length">
+  <app-project-item
+    *ngFor="let project of projects"
+    (clickEditProject)="onClickEditProject(project)"
+    (clickDelProject)="onClickDelProject(project)"
+    [item]="project"
+    class="card"
+    (inviteMember)="inviteMemberFn()"
+  >
+  </app-project-item>
+</div>
+
 <button
   class="fab-button"
   mat-fab
